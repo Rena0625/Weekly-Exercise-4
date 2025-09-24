@@ -17,7 +17,6 @@ gold_time <- group_by(gold_time, country, year)
 gold_time <- summarise(gold_time,
                        total_gold = sum(gold, na.rm = TRUE))
 
-
 ggplot(gold_time, aes(x = year, y = total_gold, color = country)) +
   geom_line() +
   geom_point() +
